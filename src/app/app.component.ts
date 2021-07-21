@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'first-app';
+  title = 'My First angular works';
+  appMessage = "";
+
+  appEvent(event:any) {
+    this.appMessage = event;
+  }
 }
