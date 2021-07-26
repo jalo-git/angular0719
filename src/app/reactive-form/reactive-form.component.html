@@ -1,0 +1,24 @@
+    <div class="card" style="width: 25rem;">
+        <div class="card-body">
+            <form [formGroup] = "updateForm" (ngSubmit) = "updateDevice()">
+                <label for="name">Device Name: </label>
+                <input formControlName = "name" type="text" id = "name" class="btn btn-outline-success" style="margin-left: 20px;">
+                <br><br>
+                <label for="brand">Brand: </label>
+                <input formControlName = "brand" type="text" id = "brand" class="btn btn-outline-success" style="margin-left: 70px;">
+                <br><br>
+                <label for="model">Model: </label>
+                <input formControlName = "model" type="text" id = "model" class="btn btn-outline-success" style="margin-left: 67px;"> 
+                <br><br>
+                <label for="year">Year: </label>
+                <input formControlName = "year" type="text" id = "year" class="btn btn-outline-success" style="margin-left: 80px;">
+                <br><br>
+                <label for="serial">Serial: </label>  
+                <input formControlName = "serial" type="text" id = "serial" class="btn btn-outline-success" style="margin-left: 70px;">
+                <br><br>
+                <button type="submit" class="btn btn-outline-success" style="margin-left: 240px;">Update</button> 
+            </form>           
+        </div>
+      </div>
+
+

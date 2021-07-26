@@ -1,5 +1,34 @@
+<!-- {{title}} -->
+<!-- <app-first [firstMessage]="appMessage" ></app-first>
+<app-second></app-second>
+<app-third (thirdEvent)="appEvent($event)"></app-third>
+<app-fourth></app-fourth> -->
 
-<p>{{title}}</p>
+<!-- <div *ngFor="let message of appMessageArray">
+    <app-first [firstMessage]="message"></app-first>
+</div>
+<div *ngIf="showComponent">
+    <app-second></app-second>
+</div>
+<button (click)="showHide()">Show</button> -->
 
-<app-first (firstEvent)="appEvent($event)"></app-first>
-<app-second [secondMessage]="appMessage"></app-second>
+<h1>Device Details View</h1>
+
+<div *ngIf = "!showUpdate">
+<div *ngFor="let device of devices">
+    <app-device-details [deviceDetails] = "device" (updateDetails) = "updateDevice($event)">
+    </app-device-details>
+</div>
+</div>
+<!-- <div>
+    <app-template-form (deviceDetail)=addDevice($event)></app-template-form>
+</div> -->
+
+<div *ngIf = "showUpdate">
+    <app-reactive-form></app-reactive-form>
+</div>
+
+
+
+<router-outlet></router-outlet>
+
